@@ -7,7 +7,7 @@ firstName = 'Jon'
 lastName = 'Snow'
 age = 24
 console.log(
- `Soy ${firstName} ${lastName}, tengo ${age} años y me gustan los lobos.`
+    `Soy ${firstName} ${lastName}, tengo ${age} años y me gustan los lobos.`
 )
 
 // 1.3 Dado el siguiente código, imprime con un console.log la suma del precio de ambos juguetes.
