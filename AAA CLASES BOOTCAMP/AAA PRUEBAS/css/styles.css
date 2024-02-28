@@ -1,0 +1,572 @@
+/*FUENTES*/
+
+    @font-face {
+        font-family: "nevis";
+        src: url("fonts/nevis.eot");
+        src: url("fonts/nevis.eot?#iefix") format("embedded-opentype"),
+            url("fonts/nevis.woff") format("woff"),
+            url("fonts/nevis.ttf") format("truetype"),
+            url("fonts/nevis.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "fajala";
+        src: url("fonts/FjallaOne-Regular.ttf") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "icons";
+        src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg'),
+             url("fonts/websymbols-regular-webfont.eot");
+        src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+            url("fonts/websymbols-regular-webfont.woff") format("woff"),
+            url("fonts/websymbols-regular-webfont.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+/*FIN FUENTES*/
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+
+/*ESTILOS GENERALES*/
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    body {
+        /*El " ../ " sirve para volver una carpeta en el directorio */
+        background-image: url("../img/wallpaperbetter.com_1920x1080\(1\).jpg");
+        background-attachment: fixed;
+    }
+
+    #logo {
+        border-radius: 50%;
+        align-items: center;
+        box-shadow: lightgrey 10px 3px 3px;
+    }
+
+    /*ESTILOS FORMULARIOS*/
+
+    input[type="text"],     /*De esta forma, con las " , " añadimos los estilos a todos estos inputs enlazados*/
+    input[type="email"],    /*Se utilizan las comas para el selector múltiple*/
+    input[type="password"],
+    select{
+        border: 1px solid rgba(0, 0, 0, 0.775);
+        box-shadow: 0px 0px 6px inset rgba(23, 23, 23, 0.722);
+        padding: 1px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        color: gray;
+        transition: all 500ms;
+
+
+    }
+
+    input[type="text"]:focus, /*Sirve para aplicar estos cambios una vez he pinchado dentro*/
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    select:focus{
+        border: 1px solid black;
+        color: black;
+    
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"]{
+        display: block;
+        border-radius: 2px;
+        width: 50%;
+        padding: 3px;
+        background-color: #70b231;
+        color: white;
+        border: 1px solid rgba(0, 0, 0, 0.738);
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0px 0px 4px inset rgba(51, 51, 51, 0.647);
+    }
+
+    
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover{
+        box-shadow: 0px 0px 2px  white;
+        
+    }
+
+    input[type="button"]:active,
+    input[type="submit"]:active,
+    input[type="reset"]:active{
+        box-shadow: 0px 0px 4px #70b231;
+    }
+
+
+
+    /*FIN ESTILOS FORMULARIOS*/
+
+
+
+/*FIN ESTILOS GENERALES*/
+
+
+
+
+/*ESTILOS CABECERA*/
+
+    #header {
+        min-width: 100%;
+        width: 100%;
+        height: 250px;
+        margin: 0px auto;
+    }
+
+    #header a {
+        text-decoration: none;
+    }
+
+    #header #logotipo {
+        width: 75%;
+        margin: 0px auto;
+        padding-top: 20px;
+
+    }
+
+    #header #logotipo img {
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        width: 150px;
+    }
+
+    #header h1 {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 40px;
+        color: #70b231;
+        text-shadow: lightgrey 1px 2px 1px;
+        font-family: "nevis";
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-top: 10px;
+        transition: all 300ms;
+    }
+
+    #header h1:hover {
+        text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70b231;
+
+    }
+
+    #boton {
+        margin-top: 10px;
+        margin-left: 20px;
+        padding-top: 10px;
+        background: transparent;
+        text-align: center;
+        font-family: "nevis";
+        color: #70b231;
+        font-weight: 400;
+        font-size: 40px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding: 16px 36px;
+        border: 2px solid #70b231;
+        border-radius: 32px;
+        transform: translate(0);
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 500ms;
+
+    }
+
+    #boton::before {
+        content: "";
+        position: absolute;
+        background: #95dd53;
+        width: 8px;
+        top: 0;
+        bottom: 0;
+        left: -32px;
+        transform: rotate(-16deg);
+        filter: blur(6px);
+    }
+
+    #boton:hover {
+        text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70b231;
+    }
+
+    #boton:hover::before {
+        left: calc(100% + 32px);
+        transition: 0.75s;
+
+    }
+
+
+    #header h1 a {
+        color: #70b231;
+    }
+
+/*FIN ESTILO CABECERA*/
+
+
+    /*BARRA DE NAVEGACIÓN*/
+
+    #nav {
+        margin-top: 80px;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.647);
+        color: white;
+        height: 40px;
+        font-family: sans-serif, Helvetica, Arial;
+        font-size: 14px;
+        box-shadow: 0px 0px 2px gray;
+
+    }
+
+    #nav ul {
+        list-style: none;
+        text-decoration: none;
+        margin: 0px auto;
+        width: 1025px;
+
+    }
+
+    #nav >ul > li {
+        /*Esta era la forma de seleccionar elementos hijo dentro del documento html*/
+        line-height: 40px;
+        float: left;
+        border-right: 1px solid gray;
+        transition: all 500ms;
+
+    }
+
+    #nav > ul > li > a {
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        color:#70b231;
+        text-decoration: none;
+        transition: all 500ms;
+    }
+
+    #nav > ul > li > a:first-child{    /*Sirve para seleccionar el primer elemento hijo de esa lista*/
+        border-left: 1px solid gray;
+    }
+
+    #nav > ul > li:hover{
+        background-color:#70b231;
+        box-shadow: 0px 0px 4px green inset;
+    }
+    #nav > ul > li:hover > a{
+        color: white;
+    }
+
+
+
+/*MENÚ DESPLEGABLE*/
+    #nav > ul > li > ul{
+        display: none; /*Para ocultarlo*/
+        position: absolute; /*Para que no desfigure el sitio web, si no que se sobreponga a todo lo demás*/
+        color: white;
+        text-align: left;
+        width: 160px;
+        box-shadow: 0px 2px 2px grey;
+        z-index: 1;   /*Para que se superponga al resto de elementos*/
+
+
+    }
+
+    #nav > ul > li > ul > li{
+        padding: 8px;
+        font-size: 12px;
+        transition: all 500ms;
+        border-bottom: 1px solid gray;
+
+    }
+
+    #nav > ul > li > ul > li > a{
+        color:#70b231;
+        text-decoration: none;
+        transition: all 500ms;
+        
+    }
+
+    #nav > ul > li:hover > ul{ /*Para desplegar el menú al hacer hover*/
+        display: block;
+        background-color: #333333;
+        
+    }
+
+    #nav > ul > li > ul > li:hover{
+        display: block;
+        background-color: #333333b8;
+        box-shadow: 0px 0px 4px rgb(190, 190, 190) inset;
+        
+    }
+    #nav > ul > li > ul > li:hover> a{
+        color: #ffffff;
+        
+    }
+
+/*TODO LO ANTERIOR HA SIDO PARA DARLE ESTILOS AL MENÚ Y A SU DESPLIEGUE*/
+
+
+/*INICIO DEL CONTENIDO CENTRAL*/
+
+    #contenido{
+        width: 75%;
+        min-height: 700px;;
+        margin: 0px auto;
+        font-family: sans serif, arial, helvetica;
+
+    }
+
+    /*BARRA LATERAL*/
+
+    #aside a{
+        text-decoration: none;
+        color:#70b231;
+    }
+
+    #aside a:hover{
+        text-decoration-line: underline;
+    }
+
+    #aside, #frase{
+        width: 15%;
+        float: left; /*Sirve que esa caja va a ir flotada a la izquierda*/
+        margin: 30px;
+        color:#70b231;
+        background-color: rgba(51, 51, 51, 0.647);
+        border: 1px solid #333333;
+        box-shadow: 1px 1px 2px inset gray;
+        font-family: sans serif, arial, helvetica;
+        padding: 5px;
+
+    }
+
+        #aside .widget{
+            display: block;
+            width: 80%;
+            margin: 5px auto;
+            padding: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.486);
+
+        }
+
+        #aside .widget:last-child{
+            margin-bottom: 20px;
+        }
+
+        #frase{
+            width: 14%;
+            max-width: 125%;
+            padding:10px;
+            font-size: 14px;
+            color: lightgray;
+            font-family: sans serif, arial, helvetica;
+            
+        }
+
+        #frase a{
+            text-decoration: none;
+            color: #70b231;
+            text-align: center;
+        }
+
+        #frase a:hover{
+            text-decoration:underline;
+        }
+
+
+        #aside h3{
+            display:block; /*Sirve para que los elementos se stackeen en columnas*/
+            color:#70b231;
+            width: 100%;
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 7px;
+            margin-bottom: 15px;
+            background-color:#33333331;
+            border: 1px solid rgb(190, 190, 190);
+            box-shadow: 0px 0px 5px rgb(190, 190, 190) inset;
+
+
+        }
+
+        #aside li{
+            margin-top:8px;
+            margin-bottom:5px;
+            margin-left:20px;
+            list-style:square;
+
+        }
+
+        
+        #history{
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+
+        }
+
+
+/*FORMULARIOS BARRA LATERAL*/
+
+    #aside div label,
+    #aside div input[type="text"],
+    #aside div input[type="email"],
+    #aside div input[type="password"],
+    #aside div a{
+        display: block;
+        width: 95%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+    }
+
+    #aside div input[type="button"],
+    #aside div input[type="submit"],
+    #aside div button{
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    #aside input,
+    #aside label{
+        margin:0px auto;
+        text-align: center;
+
+    }
+
+
+/*FIN DE FORMULARIOS BARRA LATERAL*/
+
+
+/*SECCIONES*/
+
+    #sections{
+        float:right;
+        width: 75%;
+        min-height: 700px;
+        font-family: sans serif, arial, helvetica;
+        margin-right: 20px;
+        color: lightgray;
+
+    }
+
+    #sections .titulo{
+        font-size: 25px;
+        margin-bottom: 5px;
+        color: #70b231;
+        text-align: center;
+        font-family: fajala;
+        font-weight: normal;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+
+    }
+
+
+    #sections section{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 700px;
+        border: 1px solid #333333;
+        background-color: #333333cf;
+        padding: 25px;
+        padding-right: 35px;
+        box-shadow: 0px 0px 4px inset lightgray;
+    }
+
+    #sections #backend{
+        margin-top: 60px;
+    }
+
+    #sections section a{
+        text-decoration: none;
+        width: 75%;
+        min-height: 700px;
+        color: #70b231;
+
+    }
+    #sections section a:hover{
+        text-decoration: underline;
+        
+    }
+
+
+
+    .date{
+        color: gray;
+        font-size: 12px;
+    }
+
+    .icon{
+        font-family: 'icons';
+        float:left;
+        font-size:14px;
+        margin-right: 5px;
+    }
+
+/*FIN DE SECCIONES*/
+
+
+/*FOOTER*/
+
+    #footer{
+        width: 100%;
+        margin: 0px auto;
+        text-align: center;
+        margin-top: 40px;
+        background-color:#333333eb;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 14px;
+        box-shadow: 0px 0px 2px inset lightgray;
+
+    }
+
+    #footer a{
+        text-decoration: none;
+        color: white;
+        text-decoration: underline 1px;
+    }
+
+    #footer a:hover{
+        color: #70b231;
+    }
+
+
+
+/*FIN DE FOOTER*/
+
+
+
+/* RESPONSIVE*/
+
+/*Desde la anchura 0px hasta la anchura 1230px, va a haber unos estilos diferentes de lo anterior*/
+@media screen and (min-width: 0px) and (max-width: 1230px) {
+    #nav{
+        width: 50%;
+    }
+
+}

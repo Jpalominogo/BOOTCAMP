@@ -1,0 +1,31 @@
+.grid-container {
+ background-color: rgb(145, 253, 135);
+ width: 70%;
+ height: 700px;
+ display: grid;
+ grid-template-columns: 1fr 200px 1fr;
+ gap: 20px;
+}
+
+/** La unidad de medida "fr" sólo se puede utilizar en GRID*/
+/** Esta unidad de medida ignifica fracción */
+/*! Repeat -> es una función que me permitirá crear x coplumnas o x filas con el mismo tamaño sin tener que escribir x veces lo mismo*/
+/*? Se escribe de la siguiente manera:   repeat(6, 100px)   */
+
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100svh;
+}
+
+.elemento {
+ background-color: rgb(135, 167, 255);
+ padding: 20px;
+}
+
+.elemento > img {
+ object-fit: cover;
+ width: 100%;
+ height: 10 0%;
+}
