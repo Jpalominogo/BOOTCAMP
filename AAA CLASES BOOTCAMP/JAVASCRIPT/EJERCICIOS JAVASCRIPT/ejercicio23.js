@@ -12,16 +12,20 @@ const movies = [
     { name: 'Terminator', durationInMinutes: 140 }
 ]
 
-let peliculasPequenas = [];
-let peliculasMedianas = [];
-let peliculasGrandes = [];
+let peliculasPequenas = []
+let peliculasMedianas = []
+let peliculasGrandes = []
 
-movies.forEach(movie => {
+movies.forEach((movie) => {
     if (movie.durationInMinutes < 100) {
-        
-    } else if (movie.durationInMinutes <) {
-        
+        peliculasPequenas.push(movie.name)
+    } else if (movie.durationInMinutes < 200) {
+        peliculasMedianas.push(movie.name)
     } else {
-        
+        peliculasGrandes.push(movie.name)
     }
-});
+})
+
+console.log(`Estas son las peliculas pequeñas: ${peliculasPequenas}`)
+console.log(`Estas son las peliculas medianas: ${peliculasMedianas}`)
+console.log(`Estas son las peliculas grandes: ${peliculasGrandes}`)
