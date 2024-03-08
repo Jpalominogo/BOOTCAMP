@@ -10,9 +10,20 @@ const products = [
 ]
 
 let sumaTotal = 0
-let media = 0
 
 for (let i = 0; i < products.length; i++) {
     sumaTotal += products[i].sellCount
 }
 console.log('La suma total de las ventas es: ', sumaTotal)
+
+function average() {
+    let sumaTotal = 0
+    for (let i = 0; i < products.length; i++) {
+        sumaTotal += products[i].sellCount
+    }
+    let media = sumaTotal / products.length
+    console.log(media)
+    return media
+}
+
+console.log(`La media del precio de los productos es: ${average(products)}`)
