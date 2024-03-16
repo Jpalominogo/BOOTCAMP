@@ -15,6 +15,6 @@ document.body.appendChild(imagen)
 
 const div = document.createElement('div')
 const content = 'Este es el contenido'
-div.innerHTML = `<p>Soy un párrafo</p>`
+div.innerHTML = `<p>${content}</p>`
 
 document.body.appendChild(div)
