@@ -19,11 +19,3 @@ document.body.appendChild(div)
 image.classList.add('byw')
 image.classList.remove('byw')
 image.classList.toggle('byw')
-
-const campoTexto = document.getElementById('miCampoTexto')
-
-function handlePressedKey(event) {
-    console.log('Tecla presionada: ' + event.key)
-}
-
-campoTexto.addEventListener('keydown', handlePressedKey)
